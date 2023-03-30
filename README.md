@@ -1,5 +1,13 @@
-# Spring-2023
-This is course repo for CS3520 (Programming in C++) - Spring 2023 @ Northeastern University!
+# Snake-Game
+A custom built Snake Game (snake eats apples and grows). This is a culmuilative project I made while taking CS3520 at Northeastern.
 
+# How to setup:
+First, ensure you're on a linux server with a clang compiler.
 
-Checkout my Snakegame in milestone_2 (required to keep it on a seperate branch for course grading purposes)!
+Then, call:
+``` c++
+make
+
+./snake_game
+```
+voila
