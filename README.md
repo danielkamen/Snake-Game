@@ -11,3 +11,11 @@ make
 ./snake_game
 ```
 voila
+
+# This is what you'll see if everything works:
+
+![Loading Screen](https://github.com/danielkamen/Snake-Game/blob/main/images/start.png "Loading Screen")
+
+# This is what you should see after you enter a level number:
+
+![Playing Screen](https://github.com/danielkamen/Snake-Game/blob/main/images/game.png "Play Time")
