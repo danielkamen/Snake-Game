@@ -1,35 +1,4 @@
-/* game_window.cpp -------
- *
- * Filename: game_window.cpp
- * Description:
- * Author: Adeel Bhutta
- * Maintainer:
- * Created: Tue Sep  6 14:10:06 2022
- * Last-Updated: June 4 11:00 2022
- * Keywords:
- * Compatibility:
- *
- */
 
-/* Commentary:
- *
- *
- *
- */
-
-/* Change log:
- *
- *
- */
-
-/* Copyright (c) 2022 Adeel Bhutta
- *
- * All rights reserved.
- *
- * Additional copyrights may follow
- */
-
-/* Code: */
 
 #include <cstdlib>
 #include <ncurses.h>
@@ -52,8 +21,11 @@ gamewindow_t *init_GameWindow(int upper_left_x, int upper_left_y, int width, int
 
 void draw_Gamewindow(gamewindow_t *r)
 {
+	
 	int row_counter, column_counter;
-
+start_color();
+init_pair(7, COLOR_RED, COLOR_BLACK);
+attron(COLOR_PAIR(5));
 	// Draw Top of room
 	for (row_counter = r->upper_left_x;
 		 row_counter <= (r->upper_left_x + r->width);
@@ -81,6 +53,7 @@ void draw_Gamewindow(gamewindow_t *r)
 		 row_counter++) {
 		mvprintw(r->upper_left_y + r->height, row_counter, "%c", r->draw_char);
 	}
+	attroff(COLOR_PAIR(5));
 }
 
 gamewindow_t *changeGameWindow(int upper_left_x, int upper_left_y, int width, int height, gamewindow_t *r)
